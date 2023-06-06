@@ -13,6 +13,7 @@ pub fn factorial(num: u64) -> u64 {
     // For an extra challenge, don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
+    num.map(|x| x*(x-1)).sum()
 }
 
 #[cfg(test)]
