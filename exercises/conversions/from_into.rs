@@ -32,13 +32,21 @@ impl Default for Person {
 // 3. Extract the first element from the split operation and use it as the name
 // 4. If the name is empty, then return the default of Person
 // 5. Extract the other element from the split operation and parse it into a `usize` as the age
-// If while parsing the age, something goes wrong, then return the default of Person
+// If while parsing the age, something goes wrong, then return the default ostd::mem::swap(&mut value_a, &mut value_b)f Person
 // Otherwise, then return an instantiated Person object with the results
 
 // I AM NOT DONE
 
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
+        //if s.is
+        if let Some((nom,age)) = s.split_once(',') {
+        Person{
+            name: Some(nom).into(),
+            age:age.parse()
+            };
+        }
+
     }
 }
 
